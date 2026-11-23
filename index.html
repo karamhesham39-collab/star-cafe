@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>منيو كافيه ستار</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐</text></svg>">
+<style>
+:root{
+  --bg:#F6F7FB; --surface:#FFFFFF; --ink:#16223F; --muted:#5E6A85;
+  --line:#CBD2E3; --star:#E9A91A; --hot:#B8452E; --cold:#1F6FB5; --fresh:#2E8B57;
+  --head:#16223F; --head-ink:#FFFFFF;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1426; --surface:#18203A; --ink:#EEF1FA; --muted:#A3AECB;
+    --line:#35405F; --star:#F2B632; --hot:#E27A60; --cold:#6AAEEB; --fresh:#6CC795;
+    --head:#18203A; --head-ink:#FFFFFF;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1426; --surface:#18203A; --ink:#EEF1FA; --muted:#A3AECB;
+  --line:#35405F; --star:#F2B632; --hot:#E27A60; --cold:#6AAEEB; --fresh:#6CC795;
+  --head:#18203A; --head-ink:#FFFFFF;
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Tahoma,"Noto Sans Arabic",Roboto,Arial,sans-serif;line-height:1.7}
+
+header{background:var(--head);color:var(--head-ink);text-align:center;padding:44px 20px 36px}
+.logo{display:inline-flex;align-items:center;gap:12px}
+.logo svg{width:44px;height:44px;fill:var(--star)}
+h1{margin:0;font-size:clamp(2.2rem,8vw,3.4rem);font-weight:800;letter-spacing:0}
+header p{margin:6px 0 0;color:#C9D1E8;font-size:1rem}
+
+nav{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line);
+  padding:env(safe-area-inset-top,0px) 12px 0}
+nav ul{list-style:none;margin:0 auto;padding:8px 0;display:flex;gap:8px;max-width:760px;overflow-x:auto}
+nav a{display:block;white-space:nowrap;padding:6px 18px;border-radius:999px;border:1.5px solid var(--line);
+  color:var(--ink);text-decoration:none;font-weight:600}
+nav a:hover,nav a:focus-visible{border-color:var(--star);outline:none;box-shadow:0 0 0 2px var(--star)}
+
+main{max-width:760px;margin:0 auto;padding:12px 18px 56px}
+section{margin-top:36px}
+h2{display:flex;align-items:center;gap:10px;margin:0 0 6px;font-size:1.6rem;font-weight:800}
+h2::before{content:"";width:6px;height:1.5em;border-radius:3px;background:var(--accent)}
+#hot{--accent:var(--hot)} #soft{--accent:var(--cold)} #juice{--accent:var(--fresh)}
+.note{margin:0 0 10px;color:var(--muted);font-size:.95rem}
+
+ul.items{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.items li{display:flex;align-items:baseline;gap:10px;padding:11px 18px}
+.items li+li{border-top:1px solid var(--line)}
+.items .n{font-weight:600}
+.items .d{color:var(--muted);font-size:.88rem;font-weight:400;margin-inline-start:6px}
+.items .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:16px}
+.items .p{font-weight:800;white-space:nowrap}
+.items .p small{font-weight:400;color:var(--muted);font-size:.78rem;margin-inline-start:3px}
+
+footer{text-align:center;color:var(--muted);padding:0 20px 40px;font-size:.9rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.8l2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 16.8 6 20.2l1.3-6.7-5-4.7 6.8-.8z"/></svg>
+    <h1>كافيه ستار</h1>
+  </div>
+  <p>المنيو</p>
+</header>
+
+<nav aria-label="أقسام المنيو">
+  <ul>
+    <li><a href="#hot">المشروبات الساخنة</a></li>
+    <li><a href="#soft">المشروبات الغازية</a></li>
+    <li><a href="#juice">العصائر</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section id="hot">
+  <h2>المشروبات الساخنة</h2>
+  <ul class="items">
+    <li><span class="n">شاي</span><span class="dots"></span><span class="p">15<small>ج</small></span></li>
+    <li><span class="n">شاي بالنعناع</span><span class="dots"></span><span class="p">18<small>ج</small></span></li>
+    <li><span class="n">شاي بالحليب</span><span class="dots"></span><span class="p">20<small>ج</small></span></li>
+    <li><span class="n">شاي أخضر</span><span class="dots"></span><span class="p">20<small>ج</small></span></li>
+    <li><span class="n">قهوة تركي</span><span class="d">سادة / مظبوط / زيادة</span><span class="dots"></span><span class="p">25<small>ج</small></span></li>
+    <li><span class="n">قهوة فرنساوي</span><span class="dots"></span><span class="p">30<small>ج</small></span></li>
+    <li><span class="n">إسبريسو</span><span class="dots"></span><span class="p">30<small>ج</small></span></li>
+    <li><span class="n">أمريكانو</span><span class="dots"></span><span class="p">35<small>ج</small></span></li>
+    <li><span class="n">نسكافيه</span><span class="dots"></span><span class="p">30<small>ج</small></span></li>
+    <li><span class="n">نسكافيه بالحليب</span><span class="dots"></span><span class="p">35<small>ج</small></span></li>
+    <li><span class="n">كابتشينو</span><span class="dots"></span><span class="p">40<small>ج</small></span></li>
+    <li><span class="n">لاتيه</span><span class="dots"></span><span class="p">40<small>ج</small></span></li>
+    <li><span class="n">موكا</span><span class="dots"></span><span class="p">45<small>ج</small></span></li>
+    <li><span class="n">هوت شوكليت</span><span class="dots"></span><span class="p">40<small>ج</small></span></li>
+    <li><span class="n">سحلب</span><span class="dots"></span><span class="p">35<small>ج</small></span></li>
+    <li><span class="n">ينسون</span><span class="dots"></span><span class="p">15<small>ج</small></span></li>
+    <li><span class="n">قرفة</span><span class="dots"></span><span class="p">15<small>ج</small></span></li>
+    <li><span class="n">حلبة</span><span class="dots"></span><span class="p">15<small>ج</small></span></li>
+    <li><span class="n">كركديه ساخن</span><span class="dots"></span><span class="p">20<small>ج</small></span></li>
+    <li><span class="n">زنجبيل بالعسل</span><span class="dots"></span><span class="p">25<small>ج</small></span></li>
+  </ul>
+</section>
+
+<section id="soft">
+  <h2>المشروبات الغازية</h2>
+  <ul class="items">
+    <li><span class="n">بيبسي</span><span class="dots"></span><span class="p">20<small>ج</small></span></li>
+    <li><span class="n">كوكاكولا</span><span class="dots"></span><span class="p">20<small>ج</small></span></li>
+    <li><span class="n">سفن أب</span><span class="dots"></span><span class="p">20<small>ج</small></span></li>
+    <li><span class="n">سبرايت</span><span class="dots"></span><span class="p">20<small>ج</small></span></li>
+    <li><span class="n">فانتا برتقال</span><span class="dots"></span><span class="p">20<small>ج</small></span></li>
+    <li><span class="n">ميرندا</span><span class="d">برتقال / فراولة / تفاح</span><span class="dots"></span><span class="p">20<small>ج</small></span></li>
+    <li><span class="n">شويبس</span><span class="dots"></span><span class="p">25<small>ج</small></span></li>
+    <li><span class="n">ريد بول</span><span class="dots"></span><span class="p">60<small>ج</small></span></li>
+    <li><span class="n">مياه غازية</span><span class="dots"></span><span class="p">15<small>ج</small></span></li>
+    <li><span class="n">مياه معدنية</span><span class="dots"></span><span class="p">10<small>ج</small></span></li>
+  </ul>
+</section>
+
+<section id="juice">
+  <h2>العصائر</h2>
+  <p class="note">عصائر طازجة</p>
+  <ul class="items">
+    <li><span class="n">برتقال</span><span class="dots"></span><span class="p">35<small>ج</small></span></li>
+    <li><span class="n">ليمون</span><span class="dots"></span><span class="p">30<small>ج</small></span></li>
+    <li><span class="n">ليمون بالنعناع</span><span class="dots"></span><span class="p">35<small>ج</small></span></li>
+    <li><span class="n">مانجو</span><span class="dots"></span><span class="p">40<small>ج</small></span></li>
+    <li><span class="n">فراولة</span><span class="dots"></span><span class="p">40<small>ج</small></span></li>
+    <li><span class="n">جوافة</span><span class="dots"></span><span class="p">35<small>ج</small></span></li>
+    <li><span class="n">موز بالحليب</span><span class="dots"></span><span class="p">40<small>ج</small></span></li>
+    <li><span class="n">كانتالوب</span><span class="dots"></span><span class="p">35<small>ج</small></span></li>
+    <li><span class="n">بطيخ</span><span class="dots"></span><span class="p">35<small>ج</small></span></li>
+    <li><span class="n">رمان</span><span class="dots"></span><span class="p">50<small>ج</small></span></li>
+    <li><span class="n">كيوي</span><span class="dots"></span><span class="p">45<small>ج</small></span></li>
+    <li><span class="n">أناناس</span><span class="dots"></span><span class="p">40<small>ج</small></span></li>
+    <li><span class="n">عنب</span><span class="dots"></span><span class="p">40<small>ج</small></span></li>
+    <li><span class="n">قصب</span><span class="dots"></span><span class="p">25<small>ج</small></span></li>
+    <li><span class="n">تمر هندي</span><span class="dots"></span><span class="p">25<small>ج</small></span></li>
+    <li><span class="n">كركديه</span><span class="dots"></span><span class="p">25<small>ج</small></span></li>
+    <li><span class="n">سوبيا</span><span class="dots"></span><span class="p">25<small>ج</small></span></li>
+    <li><span class="n">كوكتيل فواكه</span><span class="dots"></span><span class="p">50<small>ج</small></span></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>الأسعار بالجنيه المصري</footer>
+
+</body>
+</html>
